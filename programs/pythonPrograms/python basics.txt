@@ -1,0 +1,533 @@
+
+(base) C:\Users\acer>python
+Python 3.7.0 (default, Jun 28 2018, 08:04:48) [MSC v.1912 64 bit (AMD64)] :: Anaconda, Inc. on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+>>>
+>>> myList = ["shashank","arvind",2,[56,25,[100,200]]]
+>>> print(myList[4])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: list index out of range
+>>> print(myList[3])
+[56, 25, [100, 200]]
+>>> print(myList[3][2])
+[100, 200]
+>>> print(myList[3][2][0])
+100
+>>>
+>>> myList + ["hi"]
+['shashank', 'arvind', 2, [56, 25, [100, 200]], 'hi']
+>>> myList + [3][2]["inside"]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: list index out of range
+>>> myList + myList.append([3][2]["inside"])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: list index out of range
+>>> myList
+['shashank', 'arvind', 2, [56, 25, [100, 200]]]
+>>>
+>>>
+>>>
+>>>
+>>> myList.append('abc','xyz')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: append() takes exactly one argument (2 given)
+>>> myList.append(['abc','xyz'])
+>>>
+>>>
+>>>
+>>>
+>>> myList
+['shashank', 'arvind', 2, [56, 25, [100, 200]], ['abc', 'xyz']]
+>>> m
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'm' is not defined
+>>>
+>>>
+>>>
+>>> myList.remove(['abc','xyz'])
+>>>
+>>>
+>>>
+>>> mylist
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'mylist' is not defined
+>>>
+>>>
+>>>
+>>>
+>>> myList
+['shashank', 'arvind', 2, [56, 25, [100, 200]]]
+>>>
+>>>
+>>>
+>>>
+>>> myList.insert(1,"mishra")
+>>>
+>>>
+>>> myList
+['shashank', 'mishra', 'arvind', 2, [56, 25, [100, 200]]]
+>>>
+>>>
+>>>
+>>>
+>>> myList.remove("shashank","mishra")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: remove() takes exactly one argument (2 given)
+>>>
+>>>
+>>>
+>>>
+>>> myList.remove("shashank")
+>>>
+>>> myList.remove("mishra")
+>>>
+>>> myList.remove("arvind")
+>>>
+>>>
+>>> myList.sort()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: '<' not supported between instances of 'list' and 'int'
+>>>
+>>>
+>>>
+>>> myList
+[2, [56, 25, [100, 200]]]
+>>>
+>>>
+>>> myList.append("arvind")
+>>>
+>>> myList
+[2, [56, 25, [100, 200]], 'arvind']
+>>>
+>>>
+>>>
+>>>
+>>> myList.append(["shashank","greyatom"])
+>>>
+>>>
+>>> myList
+[2, [56, 25, [100, 200]], 'arvind', ['shashank', 'greyatom']]
+>>>
+>>>
+>>> myList.extend("hello")
+>>>
+>>>
+>>> myList
+[2, [56, 25, [100, 200]], 'arvind', ['shashank', 'greyatom'], 'h', 'e', 'l', 'l', 'o']
+>>>
+>>>
+>>>
+>>>
+>>> myDisct = {"key1":"shashank","key2":"mishra","key3":"uyg"}
+>>> myDisct.append("key4":"[100,200,300,400]")
+  File "<stdin>", line 1
+    myDisct.append("key4":"[100,200,300,400]")
+                         ^
+SyntaxError: invalid syntax
+>>>
+>>>
+>>>
+>>>
+>>>
+>>> myDict
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'myDict' is not defined
+>>> myDict[key2]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'myDict' is not defined
+>>>
+>>>
+>>>
+>>>
+>>> myDict["key2"]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'myDict' is not defined
+>>>
+>>>
+>>>
+>>>
+>>>
+>>> myDict['key2']
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'myDict' is not defined
+>>>
+>>>
+>>>
+>>> d['key1'] = 100
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'd' is not defined
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>> myDict = {}
+>>>
+>>>
+>>> myDict = {}
+>>>
+>>>
+>>>
+>>> myDict = {'key1':'shashank'}
+>>>
+>>> myDict
+{'key1': 'shashank'}
+>>>
+>>>
+>>>
+>>>
+>>>
+>>> myDict = {"key2":"mishra"}
+>>>
+>>> myDict
+{'key2': 'mishra'}
+>>>
+>>>
+>>>
+>>> myDict = {'key1':123,'key2':[12,23,33],'key3':['item0','item1','item2']}
+>>>
+>>>
+>>> myDict['key3'][1]
+'item1'
+>>>
+>>>
+>>>
+>>>
+KeyboardInterrupt
+>>>
+>>>
+>>>
+>>>
+>>>
+>>> myDict
+{'key1': 123, 'key2': [12, 23, 33], 'key3': ['item0', 'item1', 'item2']}
+>>>
+>>>
+>>>
+>>>
+>>> t1 = (1,2,3,445,6)
+>>>
+>>> t1 = (56)
+>>>
+>>> t1
+56
+>>> t1 = (1,2,3,445,6)
+>>> t1
+(1, 2, 3, 445, 6)
+>>>
+>>>
+>>>
+>>> t1 = (56)
+>>>
+>>> print(type(t1))
+<class 'int'>
+>>>
+>>>
+>>>
+>>> t1 = (1,2,3,445,6)
+>>> print(type(t1))
+<class 'tuple'>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>> myList + myList.append([3][2]["inside"])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: list index out of range
+>>> myList
+[2, [56, 25, [100, 200]], 'arvind', ['shashank', 'greyatom'], 'h', 'e', 'l', 'l', 'o']
+>>>
+>>>
+>>> set(myList)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unhashable type: 'list'
+>>>
+>>>
+>>>
+>>>
+>>> myList.clear()
+>>>
+>>>
+>>> myList
+[]
+>>>
+>>>
+>>>
+>>>
+>>> myList = [100,200,200,100,'shashank']
+>>>
+>>>
+>>> set(myList)
+{200, 100, 'shashank'}
+>>>
+>>>
+>>>
+>>>
+>>> a=100
+>>> b=10
+>>>
+>>> if a<b : #condition
+... print("true")
+  File "<stdin>", line 2
+    print("true")
+        ^
+IndentationError: expected an indented block
+>>> if a<b : #condition
+... print("true")   elif a == b
+  File "<stdin>", line 2
+    print("true")   elif a == b
+        ^
+IndentationError: expected an indented block
+>>> if a<b : #condition
+... print("true")
+  File "<stdin>", line 2
+    print("true")
+        ^
+IndentationError: expected an indented block
+>>>
+>>> if a<b :
+... print("true")
+  File "<stdin>", line 2
+    print("true")
+        ^
+IndentationError: expected an indented block
+>>>
+>>>
+>>>
+>>>
+>>>
+>>> a = 5
+>>> b = 4
+>>>
+>>> if a > b:
+...     # we are inside the if block
+...     print("a is greater than b")
+... elif b > a:
+...     # we are inside the elif block
+...     print("b is greater than a")
+... else:
+...     # we are inside the else block
+...     print("a and b are equal")
+...
+a is greater than b
+>>> if a > b:
+...     print("a is greater than b")
+...
+a is greater than b
+>>>
+>>>
+>>>
+>>>
+>>> newList = [1,2,3,4,5,6,7,8,9,10]
+>>>
+>>> for i in myList:
+...     print(sqrt(i))
+...
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+NameError: name 'sqrt' is not defined
+>>>
+>>>
+>>>
+>>> newList = [1,2,3,4,5,6,7,8,9,10]
+>>> for i in myList:
+...     print(math.sqrt(i))
+...
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+NameError: name 'math' is not defined
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>> myDict = {"key1":}
+  File "<stdin>", line 1
+    myDict = {"key1":}
+                     ^
+SyntaxError: invalid syntax
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>> name = ["shashank","mishra","greyAtom"]
+>>>
+>>> hello = ["Hello "+ s for n in name]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 1, in <listcomp>
+NameError: name 's' is not defined
+>>> hello = ["Hello "+ n for n in name]
+>>>
+>>>
+>>> print(hello)
+['Hello shashank', 'Hello mishra', 'Hello greyAtom']
+>>>
+>>>
+>>>
+>>>
+>>> numbers = list(range(10))
+>>>
+>>> print(numbers)
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+>>>
+>>>
+>>> numbers = [5,6,9,8,7,1,2,3]
+>>>
+>>> numbers
+[5, 6, 9, 8, 7, 1, 2, 3]
+>>>
+>>>
+>>> cubeRoot = [value**0.33 for value in numbers]
+>>>
+>>> cubeRoot
+[1.7008268430839244, 1.8063001276853345, 2.0649047728786885, 1.9861849908740719, 1.900563363234187, 1.0, 1.2570133745218284, 1.4369776521848516]
+>>>
+>>>
+>>>
+>>>
+>>> try:
+...     x = 1 / 0
+... except ZeroDivisionError:
+...     print('divided by zero')
+...     print('executed when exception occurs')
+... else:
+...     print('executed only when exception does not occur')
+... finally:
+...     print('finally block, always executed')
+...
+divided by zero
+executed when exception occurs
+finally block, always executed
+>>>
+>>>
+>>>
+>>>
+>>>
+>>> try:
+... x=20/0
+  File "<stdin>", line 2
+    x=20/0
+    ^
+IndentationError: expected an indented block
+>>> try:
+... x=20/0
+  File "<stdin>", line 2
+    x=20/0
+    ^
+IndentationError: expected an indented block
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>> rangeList = list(range(30,50))
+>>>
+>>> rangeList
+[30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+>>>
+>>>
+>>> iterator = iter(rangeList)
+>>>
+>>> iterator
+<list_iterator object at 0x000001870B0214A8>
+>>>
+>>>
+>>> next(iterator)
+30
+>>> iterator.__next__()
+31
+>>>
+>>>
+>>> for value in next(iterator)
+  File "<stdin>", line 1
+    for value in next(iterator)
+                              ^
+SyntaxError: invalid syntax
+>>>
+>>>
+>>>
+>>> next(iterator)
+32
+>>> print(next(iterator))
+33
+>>> previous(iterator)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'previous' is not defined
+>>>
+>>>
+>>>
+>>>
+>>> numbers = list(range(25,60))
+>>>
+>>> numbers
+[25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59]
+>>>
+>>>
+>>> ietartor = iter(numbers)
+>>>
+>>> ietartor
+<list_iterator object at 0x000001870AFFDE48>
+>>>
+>>>
+>>>
+>>> next(ietartor)
+25
+>>> next(ietartor)
+26
+>>> next(ietartor)
+27
+>>>
+>>>
+>>> for i in ietartor:
+... print(next(i))
+  File "<stdin>", line 2
+    print(next(i))
+        ^
+IndentationError: expected an indented block
+>>> next(ietartor)
+28
+>>> next(ietartor)
+29
+>>> next(ietartor)
+30
+>>> next(ietartor)
+31
+>>>
+>>>
+>>>
+>>> try:
+...
+  File "<stdin>", line 2
+
+    ^
+IndentationError: expected an indented block
+>>>
+>>>
+>>>
